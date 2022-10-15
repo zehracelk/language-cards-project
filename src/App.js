@@ -1,22 +1,19 @@
 import './App.css';
-import {languages} from './helper/data';
 import Card from './components/card/Card';
-import {ReactComponent as ReactLogo} from './assets/react.svg';
+import Header from './components/Header';
+import Container from 'react-bootstrap/Container'
 
 
 function App() {
   return (
-    <div className="App d-flex flex-column align-items-center ">
+    <Container className='text-center mt-4'>
+     
+      <Header/>
+      <Card/>
 
-    <ReactLogo height={150} width={150}/>
+    </Container >
 
-     <div className="container row w-75 m-auto">
-      <img src="{language-cards-project/src/assets/react.svg}" alt="" />
-      {
-        languages.map((item)=><Card img={item.img}/>)
-      }
-    </div>
-    </div>
+  
   );
 }
 
