@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {languages} from './helper/data';
+import Card from './components/card/Card';
+import {ReactComponent as ReactLogo} from './assets/react.svg';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App d-flex flex-column align-items-center ">
+
+    <ReactLogo height={150} width={150}/>
+
+     <div className="container row w-75 m-auto">
+      <img src="{language-cards-project/src/assets/react.svg}" alt="" />
+      {
+        languages.map((item)=><Card img={item.img}/>)
+      }
+    </div>
     </div>
   );
 }
